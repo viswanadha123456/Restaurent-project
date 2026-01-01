@@ -93,33 +93,6 @@ body {
 
 /* CARD SECTION */
 
-/* CARDS STACK VERTICALLY */
-.cards {
-    min-height: 65vh;
-    padding: 30px;
-    display: flex;
-    flex-direction: column; /* vertical stacking */
-    align-items: center;    /* center horizontally */
-    gap: 20px;              /* space between cards */
-}
-
-/* CARD – AUTO SCALE */
-.card {
-    width: clamp(360px, 90vw, 460px);
-    background: rgba(255,255,255,0.95);
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-    cursor: pointer;
-}
-
-/* IMAGE – AUTO SCALE */
-.card img {
-    width: 100%;
-    height: clamp(220px, 55vw, 300px);
-    object-fit: cover;
-}
-
 /* CARD BODY */
 .card-body {
     padding: clamp(18px, 5vw, 24px);
@@ -151,6 +124,34 @@ body {
     border-radius: 20px;
     font-size: clamp(13px, 3.5vw, 15px);
 }
+.cards {
+    min-height: 65vh;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;  /* stack cards vertically */
+    align-items: center;     /* center horizontally */
+    gap: 20px;               /* vertical spacing between cards */
+    width: 100%;
+    max-width: 460px;        /* max card width to keep consistent */
+    margin: 0 auto;          /* center the entire container */
+}
+
+.card {
+    width: 100%;             /* full width of container */
+    max-width: 460px;        /* limit max width */
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: clamp(220px, 55vw, 300px);
+    object-fit: cover;
+}
+
 
 
 
