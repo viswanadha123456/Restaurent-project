@@ -1,145 +1,106 @@
 /* RESET */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
-    /* BACKGROUND */
-    body {
-      min-height: 100vh;
-      background-image: url("https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/chicken-biryani-5_n3pwns.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      padding: 20px;
-      color: #333;
-    }
+/* BODY & PAGE */
+body {
+  background: #f3f3f3;
+  padding: 20px;
+}
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-    /* PAGE CONTAINER */
-    .page {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+/* HEADER */
+.header {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
 
-    /* HEADER */
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: 20px;
-      color: white;
-      font-weight: bold;
-      font-size: 24px;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-    }
+/* SEARCH BOX */
+.search-container {
+  margin-bottom: 30px;
+}
+.search-box {
+  width: 100%;
+  max-width: 600px;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
 
-    /* SEARCH BOX */
-    .search-container {
-      padding-bottom: 20px;
-      display: flex;
-      justify-content: center;
-    }
-    .search-box {
-      width: 100%;
-      max-width: clamp(320px, 85vw, 650px);
-      padding: 14px 18px;
-      border-radius: 30px;
-      border: none;
-      outline: none;
-      font-size: clamp(15px, 4vw, 18px);
-    }
+/* RESTAURANT CARD */
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
 
-    /* OUTER RESTAURANT CARDS CONTAINER */
-    .restaurants {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-    }
+.restaurant {
+  background: #fff;
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
 
-    /* SINGLE RESTAURANT CARD */
-    .restaurant-card {
-      background: rgba(255,255,255,0.95);
-      border-radius: 20px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-      width: 360px;
-      max-width: 100%;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    .restaurant-title {
-      font-size: 22px;
-      font-weight: 700;
-      margin-bottom: 10px;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 6px;
-    }
+.restaurant-title {
+  font-size: 22px;
+  font-weight: 700;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #eee;
+}
 
-    /* INNER ITEMS LIST */
-    .items-list {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      max-height: 600px;
-      overflow-y: auto;
-      padding-right: 6px;
-    }
+/* ITEMS LIST */
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
 
-    /* SINGLE ITEM CARD INSIDE RESTAURANT */
-    .item-card {
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-      display: flex;
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-    .item-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
-    }
+/* SINGLE ITEM */
+.item {
+  display: flex;
+  background: #fafafa;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.item:hover {
+  transform: translateY(-3px);
+}
 
-    .item-img {
-      width: 120px;
-      height: 100px;
-      object-fit: cover;
-      flex-shrink: 0;
-    }
+.item img {
+  width: 120px;
+  height: 100px;
+  object-fit: cover;
+}
 
-    .item-body {
-      padding: 12px 15px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      flex-grow: 1;
-    }
+.item-info {
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-    .item-title {
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
+.item-info h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
 
-    .rating {
-      font-size: 14px;
-      color: #555;
-      margin-bottom: 8px;
-    }
-
-    .tags {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .tags span {
-      background: #ffe0b2;
-      padding: 6px 12px;
-      border-radius: 18px;
-      font-size: 13px;
-    }
+.item-info p {
+  font-size: 14px;
+  color: #555;
+}
