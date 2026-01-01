@@ -35,26 +35,62 @@
     </div>
 
     <!-- CARD SECTION -->
-    <section class="cards">
-        <div class="card">
-            <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/chicken-biryani-5_n3pwns.jpg">
+   <!-- CARD SECTION -->
+<section class="cards" id="cards-container">
+    <!-- Initial card -->
+    <div class="card" onclick="showItems()">
+        <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/chicken-biryani-5_n3pwns.jpg">
 
-            <div class="card-body">
-                <h3>Masha Biryani Point</h3>
+        <div class="card-body">
+            <h3>Hyderabad Biryani Point</h3>
 
-                <div class="rating">
-                    ⭐⭐⭐⭐☆ <span>11 reviews</span>
-                </div>
+            <div class="rating">
+                ⭐⭐⭐⭐☆ <span>11 reviews</span>
+            </div>
 
-                <div class="tags">
-                    <span>Biryani</span>
-                    <span>Non-Veg</span>
-                </div>
+            <div class="tags">
+                <span>Biryani</span>
+                <span>Non-Veg</span>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 </div>
+<script>
+function showItems() {
+    const container = document.getElementById("cards-container");
+
+    // Replace content with new items
+    container.innerHTML = `
+        <div class="card">
+            <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/mutton-biryani.jpg">
+            <div class="card-body">
+                <h3>Mutton Biryani Special</h3>
+                <div class="rating">⭐⭐⭐⭐☆ <span>8 reviews</span></div>
+                <div class="tags"><span>Biryani</span><span>Non-Veg</span></div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/veg-biryani.jpg">
+            <div class="card-body">
+                <h3>Veg Biryani Delight</h3>
+                <div class="rating">⭐⭐⭐⭐⭐ <span>15 reviews</span></div>
+                <div class="tags"><span>Biryani</span><span>Veg</span></div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/chicken-biryani-5_n3pwns.jpg">
+            <div class="card-body">
+                <h3>Chicken Biryani Classic</h3>
+                <div class="rating">⭐⭐⭐⭐⭐ <span>20 reviews</span></div>
+                <div class="tags"><span>Biryani</span><span>Non-Veg</span></div>
+            </div>
+        </div>
+    `;
+}
+</script>
 
 </body>
 </html>
+
