@@ -94,6 +94,8 @@ body {
 /* CARD SECTION */
 .cards {
     padding: 30px;
+    display: flex;
+    justify-content: center;   /* center horizontally */
 }
 
 /* CARD */
@@ -130,4 +132,5 @@ body {
     font-size: 12px;
     margin-right: 6px;
 }
+
 
