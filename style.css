@@ -123,6 +123,12 @@ body {
     color: #555;
     margin-bottom: 8px;
 }
+.cards {
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* TAGS */
 .tags span {
@@ -132,5 +138,6 @@ body {
     font-size: 12px;
     margin-right: 6px;
 }
+
 
 
