@@ -1,1 +1,152 @@
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; } /* BACKGROUND */ body { min-height: 100vh; background-image: url("https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/chicken-biryani-5_n3pwns.jpg"); background-size: cover; background-position: center; background-repeat: no-repeat; } /* FIXED PAGE */ .page { width: 1200px; max-width: 100%; margin: 0 auto; min-height: 100vh; } /* HEADER */ .header { position: relative; display: flex; justify-content: space-between; align-items: center; padding: 20px 30px; } /* LOGO */ .logo { color: white; font-size: 22px; font-weight: bold; } /* MENU ICON */ .menu-icon { font-size: 26px; color: white; cursor: pointer; } /* HIDE CHECKBOX */ #menu-toggle { display: none; } /* MENU */ .nav { position: absolute; top: 70px; right: 30px; width: 200px; display: none; flex-direction: column; } .nav a { color: white; text-decoration: none; padding: 12px; background: rgba(0,0,0,0.4); } /* SHOW MENU */ #menu-toggle:checked ~ .nav { display: flex; } /* SEARCH BELOW HEADER - CENTERED */ /* SEARCH BELOW HEADER – AUTO SCALE & BIGGER */ .search-container { padding: 16px 20px; display: flex; justify-content: center; } .search-box { width: 100%; max-width: clamp(320px, 85vw, 650px); padding: 14px 18px; border-radius: 30px; border: none; outline: none; font-size: clamp(15px, 4vw, 18px); } /* CARD SECTION */ /* CARD BODY */ .card-body { padding: clamp(18px, 5vw, 24px); } /* CARD TITLE */ .card-body h3 { font-size: clamp(18px, 5vw, 22px); margin-bottom: 10px; } /* RATING */ .rating { font-size: clamp(15px, 4vw, 17px); color: #555; margin-bottom: 12px; } /* TAGS – HORIZONTAL INSIDE CARD */ .tags { display: flex; /* horizontal layout */ gap: 8px; /* space between tags */ flex-wrap: wrap; /* wrap if too many */ } .tags span { background: #ffe0b2; padding: 8px 14px; border-radius: 20px; font-size: clamp(13px, 3.5vw, 15px); } .cards { min-height: 65vh; padding: 30px; display: flex; flex-direction: column; /* stack cards vertically */ align-items: center; /* center horizontally */ gap: 20px; /* vertical spacing between cards */ width: 100%; max-width: 460px; /* max card width to keep consistent */ margin: 0 auto; /* center the entire container */ } .card { width: 100%; /* full width of container */ max-width: 460px; /* limit max width */ background: rgba(255, 255, 255, 0.95); border-radius: 20px; overflow: hidden; box-shadow: 0 12px 30px rgba(0,0,0,0.25); cursor: pointer; } .card img { width: 100%; height: clamp(220px, 55vw, 300px); object-fit: cover; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* BACKGROUND */
+body {
+    min-height: 100vh;
+    background-image: url("https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/chicken-biryani-5_n3pwns.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* FIXED PAGE */
+.page {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+/* HEADER */
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+/* LOGO */
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* MENU ICON */
+.menu-icon {
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+}
+
+/* HIDE CHECKBOX */
+#menu-toggle {
+    display: none;
+}
+
+/* MENU */
+.nav {
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    width: 200px;
+    display: none;
+    flex-direction: column;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    background: rgba(0,0,0,0.4);
+}
+
+/* SHOW MENU */
+#menu-toggle:checked ~ .nav {
+    display: flex;
+}
+
+/* SEARCH BELOW HEADER - CENTERED */
+/* SEARCH BELOW HEADER – AUTO SCALE & BIGGER */
+.search-container {
+    padding: 16px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-box {
+    width: 100%;
+    max-width: clamp(320px, 85vw, 650px);
+    padding: 14px 18px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: clamp(15px, 4vw, 18px);
+}
+
+/* CARD SECTION */
+/* CARD BODY */
+.card-body {
+    padding: clamp(18px, 5vw, 24px);
+}
+
+/* CARD TITLE */
+.card-body h3 {
+    font-size: clamp(18px, 5vw, 22px);
+    margin-bottom: 10px;
+}
+
+/* RATING */
+.rating {
+    font-size: clamp(15px, 4vw, 17px);
+    color: #555;
+    margin-bottom: 12px;
+}
+
+/* TAGS – HORIZONTAL INSIDE CARD */
+.tags {
+    display: flex; /* horizontal layout */
+    gap: 8px; /* space between tags */
+    flex-wrap: wrap; /* wrap if too many */
+}
+
+.tags span {
+    background: #ffe0b2;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: clamp(13px, 3.5vw, 15px);
+}
+
+.cards {
+    min-height: 65vh;
+    padding: 30px;
+    display: flex;
+    flex-direction: column; /* stack cards vertically */
+    align-items: center; /* center horizontally */
+    gap: 20px; /* vertical spacing between cards */
+    width: 100%;
+    max-width: 460px; /* max card width to keep consistent */
+    margin: 0 auto; /* center the entire container */
+}
+
+.card {
+    width: 100%; /* full width of container */
+    max-width: 460px; /* limit max width */
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: clamp(220px, 55vw, 300px);
+    object-fit: cover;
+}
