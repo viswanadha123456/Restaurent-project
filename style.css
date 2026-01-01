@@ -7,7 +7,7 @@
 
 /* BACKGROUND */
 body {
-    min-height: 100vh;
+    min-height: 1000vh;
     background-image: url("https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/chicken-biryani-5_n3pwns.jpg");
     background-size: cover;
     background-position: center;
@@ -23,32 +23,47 @@ body {
 }
 
 /* HEADER */
+/* HEADER */
 .header {
-    position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* logo left, menu right */
     align-items: center;
     padding: 20px 30px;
 }
 
 /* LOGO */
 .logo {
-    color: Black;
+    color: black; /* logo text color */
     font-size: 22px;
     font-weight: bold;
+    text-align: left;
 }
 
 /* MENU ICON */
 .menu-icon {
     font-size: 26px;
-    color: white;
+    color: white; /* menu icon color */
     cursor: pointer;
 }
 
-/* HIDE CHECKBOX */
+/* NAVIGATION LINKS */
+.nav {
+    display: flex;
+    gap: 15px; /* space between links */
+}
+
+.nav a {
+    color: black; /* links color */
+    text-decoration: none;
+    padding: 8px 12px;
+    font-weight: 500;
+}
+
+/* Hide mobile menu toggle by default for desktop */
 #menu-toggle {
     display: none;
 }
+
 
 /* MENU */
 .nav {
@@ -150,4 +165,5 @@ body {
     height: clamp(220px, 55vw, 300px);
     object-fit: cover;
 }
+
 
