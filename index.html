@@ -1,483 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="page">
+  <div class="page">
 
-    <!-- HEADER -->
-    <header class="header">
-        <div class="logo">Favourite App</div>
+    <header class="header">Favourite App</header>
 
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">☰</label>
-
-        <nav class="nav">
-            <a href="#">Menu</a>
-            <a href="#">Sign in</a>
-            <a href="#">Log in</a>
-            <a href="#">Contact us</a>
-        </nav>
-    </header>
-
-    <!-- SEARCH BAR (ALWAYS BELOW HEADER) -->
     <div class="search-container">
-        <input 
-            type="search" 
-            class="search-box" 
-            placeholder="Your Favourite items are available"
-        >
+      <input type="search" class="search-box" placeholder="Search for your favorite items">
     </div>
 
-    <!-- CARD SECTION -->
+    <!-- Restaurants Section -->
     <section class="restaurants">
 
       <!-- Restaurant 1 -->
-      <div class="restaurant-card">
+      <div class="restaurant">
         <div class="restaurant-title">Hyderabad Biryani Point</div>
-        <div class="items-list">
-          <div class="item-card">
-            <img class="item-img" src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/chicken-biryani-5_n3pwns.jpg" alt="Chicken Biryani Classic" />
-            <div class="item-body">
-              <div class="item-title">Chicken Biryani Classic</div>
-              <div class="rating">⭐⭐⭐⭐⭐ <span>20 reviews</span></div>
-              <div class="tags">
-                <span>Biryani</span>
-                <span>Non-Veg</span>
-              </div>
+        <div class="items">
+          <div class="item">
+            <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/chicken-biryani-5_n3pwns.jpg" alt="Chicken Biryani">
+            <div class="item-info">
+              <h4>Chicken Biryani Classic</h4>
+              <p>⭐⭐⭐⭐⭐ 20 reviews</p>
             </div>
           </div>
-          <div class="item-card">
-            <img class="item-img" src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/mutton-biryani.jpg" alt="Mutton Biryani Special" />
-            <div class="item-body">
-              <div class="item-title">Mutton Biryani Special</div>
-              <div class="rating">⭐⭐⭐⭐☆ <span>8 reviews</span></div>
-              <div class="tags">
-                <span>Biryani</span>
-                <span>Non-Veg</span>
-              </div>
+          <div class="item">
+            <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/mutton-biryani.jpg" alt="Mutton Biryani">
+            <div class="item-info">
+              <h4>Mutton Biryani Special</h4>
+              <p>⭐⭐⭐⭐☆ 8 reviews</p>
             </div>
           </div>
-          <div class="item-card">
-            <img class="item-img" src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/veg-biryani.jpg" alt="Veg Biryani Delight" />
-            <div class="item-body">
-              <div class="item-title">Veg Biryani Delight</div>
-              <div class="rating">⭐⭐⭐⭐⭐ <span>15 reviews</span></div>
-              <div class="tags">
-                <span>Biryani</span>
-                <span>Veg</span>
-              </div>
+          <div class="item">
+            <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/veg-biryani.jpg" alt="Veg Biryani">
+            <div class="item-info">
+              <h4>Veg Biryani Delight</h4>
+              <p>⭐⭐⭐⭐⭐ 15 reviews</p>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Restaurant 2 -->
-      <div class="restaurant-card">
+      <div class="restaurant">
         <div class="restaurant-title">Kolkata Food Hub</div>
-        <div class="items-list">
-          <div class="item-card">
-            <img class="item-img" src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/fish-biryani.jpg" alt="Fish Biryani Special" />
-            <div class="item-body">
-              <div class="item-title">Fish Biryani Special</div>
-              <div class="rating">⭐⭐⭐⭐⭐ <span>14 reviews</span></div>
-              <div class="tags">
-                <span>Biryani</span>
-                <span>Non-Veg</span>
-              </div>
+        <div class="items">
+          <div class="item">
+            <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/fish-biryani.jpg" alt="Fish Biryani">
+            <div class="item-info">
+              <h4>Fish Biryani Special</h4>
+              <p>⭐⭐⭐⭐⭐ 14 reviews</p>
             </div>
           </div>
-          <div class="item-card">
-            <img class="item-img" src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/shrimp-biryani.jpg" alt="Shrimp Biryani Deluxe" />
-            <div class="item-body">
-              <div class="item-title">Shrimp Biryani Deluxe</div>
-              <div class="rating">⭐⭐⭐⭐⭐ <span>13 reviews</span></div>
-              <div class="tags">
-                <span>Biryani</span>
-                <span>Non-Veg</span>
-              </div>
+          <div class="item">
+            <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/shrimp-biryani.jpg" alt="Shrimp Biryani">
+            <div class="item-info">
+              <h4>Shrimp Biryani Deluxe</h4>
+              <p>⭐⭐⭐⭐⭐ 13 reviews</p>
             </div>
           </div>
-          <div class="item-card">
-            <img class="item-img" src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/egg-biryani.jpg" alt="Egg Biryani Classic" />
-            <div class="item-body">
-              <div class="item-title">Egg Biryani Classic</div>
-              <div class="rating">⭐⭐⭐⭐☆ <span>9 reviews</span></div>
-              <div class="tags">
-                <span>Biryani</span>
-                <span>Non-Veg</span>
-              </div>
+          <div class="item">
+            <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/egg-biryani.jpg" alt="Egg Biryani">
+            <div class="item-info">
+              <h4>Egg Biryani Classic</h4>
+              <p>⭐⭐⭐⭐☆ 9 reviews</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Restaurant 3 -->
-      <div class="restaurant-card">
-        <div class="restaurant-title">Veggie Delight</div>
-        <div class="items-list">
-          <div class="item-card">
-            <img class="item-img" src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/veg-biryani.jpg" alt="Veg Biryani Delight" />
-            <div class="item-body">
-              <div class="item-title">Veg Biryani Delight</div>
-              <div class="rating">⭐⭐⭐⭐⭐ <span>15 reviews</span></div>
-              <div class="tags">
-                <span>Biryani</span>
-                <span>Veg</span>
-              </div>
-            </div>
-          </div>
-          <div class="item-card">
-            <img class="item-img" src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/paneer-biryani.jpg" alt="Paneer Biryani Delight" />
-            <div class="item-body">
-              <div class="item-title">Paneer Biryani Delight</div>
-              <div class="rating">⭐⭐⭐⭐ <span>10 reviews</span></div>
-              <div class="tags">
-                <span>Biryani</span>
-                <span>Veg</span>
-              </div>
-            </div>
-          </div>
-          <div class="item-card">
-            <img class="item-img" src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/veg-fried-rice.jpg" alt="Veg Fried Rice" />
-            <div class="item-body">
-              <div class="item-title">Veg Fried Rice</div>
-              <div class="rating">⭐⭐⭐⭐ <span>17 reviews</span></div>
-              <div class="tags">
-                <span>Rice</span>
-                <span>Veg</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Restaurant 4 -->
-      <div class="restaurant-card">
-        <div class="restaurant-title">Non-Veg Paradise</div>
-        <div class="items-list">
-          <div class="item-card">
-            <img class="item-img" src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/chicken-fried-rice.jpg" alt="Chicken Fried Rice" />
-            <div class="item-body">
-              <div class="item-title">Chicken Fried Rice</div>
-              <div class="rating">⭐⭐⭐⭐☆ <span>19 reviews</span></div>
-              <div class="tags">
-                <span>Rice</span>
-                <span>Non-Veg</span>
-              </div>
-            </div>
-          </div>
-          <div class="item-card">
-            <img class="item-img" src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/beef-biryani.jpg" alt="Beef Biryani Deluxe" />
-            <div class="item-body">
-              <div class="item-title">Beef Biryani Deluxe</div>
-              <div class="rating">⭐⭐⭐⭐ <span>12 reviews</span></div>
-              <div class="tags">
-                <span>Biryani</span>
-                <span>Non-Veg</span>
-              </div>
-            </div>
-          </div>
-          <div class="item-card">
-            <img class="item-img" src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/egg-biryani.jpg" alt="Egg Biryani Classic" />
-            <div class="item-body">
-              <div class="item-title">Egg Biryani Classic</div>
-              <div class="rating">⭐⭐⭐⭐☆ <span>9 reviews</span></div>
-              <div class="tags">
-                <span>Biryani</span>
-                <span>Non-Veg</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Add more restaurants similarly up to 10 -->
-
-      <!-- Restaurant 5 -->
-      <div class="restaurant-card">
-        <div class="restaurant-title">Spicy Tadka</div>
-        <div class="items-list">
-          <div class="item-card">
-            <img class="item-img" src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/paneer-biryani.jpg" alt="Paneer Biryani Delight" />
-            <div class="item-body">
-              <div class="item-title">Paneer Biryani Delight</div>
-              <div class="rating">⭐⭐⭐⭐ <span>10 reviews</span></div>
-              <div class="tags">
-                <span>Biryani</span>
-                <span>Veg</span>
-              </div>
-            </div>
-          </div>
-          <div class="item-card">
-            <img class="item-img" src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/veg-fried-rice.jpg" alt="Veg Fried Rice" />
-            <div class="item-body">
-              <div class="item-title">Veg Fried Rice</div>
-              <div class="rating">⭐⭐⭐⭐ <span>17 reviews</span></div>
-              <div class="tags">
-                <span>Rice</span>
-                <span>Veg</span>
-              </div>
-            </div>
-          </div>
-          <div class="item-card">
-            <img class="item-img" src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/chicken-fried-rice.jpg" alt="Chicken Fried Rice" />
-            <div class="item-body">
-              <div class="item-title">Chicken Fried Rice</div>
-              <div class="rating">⭐⭐⭐⭐☆ <span>19 reviews</span></div>
-              <div class="tags">
-                <span>Rice</span>
-                <span>Non-Veg</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Restaurant 6 -->
-      <div class="restaurant-card">
-        <div class="restaurant-title">Taste of Lucknow</div>
-        <div class="items-list">
-          <div class="item-card">
-            <img class="item-img" src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/mutton-biryani.jpg" alt="Mutton Biryani Special" />
-            <div class="item-body">
-              <div class="item-title">Mutton Biryani Special</div>
-              <div class="rating">⭐⭐⭐⭐☆ <span>8 reviews</span></div>
-              <div class="tags">
-                <span>Biryani</span>
-                <span>Non-Veg</span>
-              </div>
-            </div>
-          </div>
-          <div class="item-card">
-            <img class="item-img" src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/fish-biryani.jpg" alt="Fish Biryani Special" />
-            <div class="item-body">
-              <div class="item-title">Fish Biryani Special</div>
-              <div class="rating">⭐⭐⭐⭐⭐ <span>14 reviews</span></div>
-              <div class="tags">
-                <span>Biryani</span>
-                <span>Non-Veg</span>
-              </div>
-            </div>
-          </div>
-          <div class="item-card">
-            <img class="item-img" src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/shrimp-biryani.jpg" alt="Shrimp Biryani Deluxe" />
-            <div class="item-body">
-              <div class="item-title">Shrimp Biryani Deluxe</div>
-              <div class="rating">⭐⭐⭐⭐⭐ <span>13 reviews</span></div>
-              <div class="tags">
-                <span>Biryani</span>
-                <span>Non-Veg</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Restaurant 7 -->
-      <div class="restaurant-card">
-        <div class="restaurant-title">Southern Spice</div>
-        <div class="items-list">
-          <div class="item-card">
-            <img class="item-img" src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/egg-biryani.jpg" alt="Egg Biryani Classic" />
-            <div class="item-body">
-              <div class="item-title">Egg Biryani Classic</div>
-              <div class="rating">⭐⭐⭐⭐☆ <span>9 reviews</span></div>
-              <div class="tags">
-                <span>Biryani</span>
-                <span>Non-Veg</span>
-              </div>
-            </div>
-          </div>
-          <div class="item-card">
-            <img class="item-img" src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/veg-biryani.jpg" alt="Veg Biryani Delight" />
-            <div class="item-body">
-              <div class="item-title">Veg Biryani Delight</div>
-              <div class="rating">⭐⭐⭐⭐⭐ <span>15 reviews</span></div>
-              <div class="tags">
-                <span>Biryani</span>
-                <span>Veg</span>
-              </div>
-            </div>
-          </div>
-          <div class="item-card">
-            <img class="item-img" src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/paneer-biryani.jpg" alt="Paneer Biryani Delight" />
-            <div class="item-body">
-              <div class="item-title">Paneer Biryani Delight</div>
-              <div class="rating">⭐⭐⭐⭐ <span>10 reviews</span></div>
-              <div class="tags">
-                <span>Biryani</span>
-                <span>Veg</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Restaurant 8 -->
-      <div class="restaurant-card">
-        <div class="restaurant-title">Tandoori Flames</div>
-        <div class="items-list">
-          <div class="item-card">
-            <img class="item-img" src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/chicken-biryani-5_n3pwns.jpg" alt="Chicken Biryani Classic" />
-            <div class="item-body">
-              <div class="item-title">Chicken Biryani Classic</div>
-              <div class="rating">⭐⭐⭐⭐⭐ <span>20 reviews</span></div>
-              <div class="tags">
-                <span>Biryani</span>
-                <span>Non-Veg</span>
-              </div>
-            </div>
-          </div>
-          <div class="item-card">
-            <img class="item-img" src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/mutton-biryani.jpg" alt="Mutton Biryani Special" />
-            <div class="item-body">
-              <div class="item-title">Mutton Biryani Special</div>
-              <div class="rating">⭐⭐⭐⭐☆ <span>8 reviews</span></div>
-              <div class="tags">
-                <span>Biryani</span>
-                <span>Non-Veg</span>
-              </div>
-            </div>
-          </div>
-          <div class="item-card">
-            <img class="item-img" src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/veg-biryani.jpg" alt="Veg Biryani Delight" />
-            <div class="item-body">
-              <div class="item-title">Veg Biryani Delight</div>
-              <div class="rating">⭐⭐⭐⭐⭐ <span>15 reviews</span></div>
-              <div class="tags">
-                <span>Biryani</span>
-                <span>Veg</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Restaurant 9 -->
-      <div class="restaurant-card">
-        <div class="restaurant-title">The Spice Route</div>
-        <div class="items-list">
-          <div class="item-card">
-            <img class="item-img" src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/beef-biryani.jpg" alt="Beef Biryani Deluxe" />
-            <div class="item-body">
-              <div class="item-title">Beef Biryani Deluxe</div>
-              <div class="rating">⭐⭐⭐⭐ <span>12 reviews</span></div>
-              <div class="tags">
-                <span>Biryani</span>
-                <span>Non-Veg</span>
-              </div>
-            </div>
-          </div>
-          <div class="item-card">
-            <img class="item-img" src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/fish-biryani.jpg" alt="Fish Biryani Special" />
-            <div class="item-body">
-              <div class="item-title">Fish Biryani Special</div>
-              <div class="rating">⭐⭐⭐⭐⭐ <span>14 reviews</span></div>
-              <div class="tags">
-                <span>Biryani</span>
-                <span>Non-Veg</span>
-              </div>
-            </div>
-          </div>
-          <div class="item-card">
-            <img class="item-img" src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/shrimp-biryani.jpg" alt="Shrimp Biryani Deluxe" />
-            <div class="item-body">
-              <div class="item-title">Shrimp Biryani Deluxe</div>
-              <div class="rating">⭐⭐⭐⭐⭐ <span>13 reviews</span></div>
-              <div class="tags">
-                <span>Biryani</span>
-                <span>Non-Veg</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Restaurant 10 -->
-      <div class="restaurant-card">
-        <div class="restaurant-title">Royal Kitchens</div>
-        <div class="items-list">
-          <div class="item-card">
-            <img class="item-img" src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/egg-biryani.jpg" alt="Egg Biryani Classic" />
-            <div class="item-body">
-              <div class="item-title">Egg Biryani Classic</div>
-              <div class="rating">⭐⭐⭐⭐☆ <span>9 reviews</span></div>
-              <div class="tags">
-                <span>Biryani</span>
-                <span>Non-Veg</span>
-              </div>
-            </div>
-          </div>
-          <div class="item-card">
-            <img class="item-img" src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/paneer-biryani.jpg" alt="Paneer Biryani Delight" />
-            <div class="item-body">
-              <div class="item-title">Paneer Biryani Delight</div>
-              <div class="rating">⭐⭐⭐⭐ <span>10 reviews</span></div>
-              <div class="tags">
-                <span>Biryani</span>
-                <span>Veg</span>
-              </div>
-            </div>
-          </div>
-          <div class="item-card">
-            <img class="item-img" src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/chicken-fried-rice.jpg" alt="Chicken Fried Rice" />
-            <div class="item-body">
-              <div class="item-title">Chicken Fried Rice</div>
-              <div class="rating">⭐⭐⭐⭐☆ <span>19 reviews</span></div>
-              <div class="tags">
-                <span>Rice</span>
-                <span>Non-Veg</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <!-- Repeat up to 10 restaurants similarly -->
 
     </section>
-
-
-</div>
-<script>
-function showItems() {
-    const container = document.getElementById("cards-container");
-
-    // Replace content with new items
-    container.innerHTML = `
-        <div class="card">
-            <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/mutton-biryani.jpg">
-            <div class="card-body">
-                <h3>Mutton Biryani Special</h3>
-                <div class="rating">⭐⭐⭐⭐☆ <span>8 reviews</span></div>
-                <div class="tags"><span>Biryani</span><span>Non-Veg</span></div>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/veg-biryani.jpg">
-            <div class="card-body">
-                <h3>Veg Biryani Delight</h3>
-                <div class="rating">⭐⭐⭐⭐⭐ <span>15 reviews</span></div>
-                <div class="tags"><span>Biryani</span><span>Veg</span></div>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/chicken-biryani-5_n3pwns.jpg">
-            <div class="card-body">
-                <h3>Chicken Biryani Classic</h3>
-                <div class="rating">⭐⭐⭐⭐⭐ <span>20 reviews</span></div>
-                <div class="tags"><span>Biryani</span><span>Non-Veg</span></div>
-            </div>
-        </div>
-    `;
-}
-</script>
+    
+  </div>
 
 </body>
 </html>
-
-
