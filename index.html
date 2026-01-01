@@ -19,6 +19,16 @@
                 <a href="#">Log in</a>
                 <a href="#">Contact us</a>
             </nav>
+            <nav class="nav">
+    <a href="#" onclick="showMenu()">Menu</a>
+    <a href="#" onclick="showSignIn()">Sign in</a>
+    <a href="#" onclick="showLogIn()">Log in</a>
+    <a href="#" onclick="showContact()">Contact us</a>
+</nav>
+
+<!-- Container to display dynamic content -->
+<div id="info-container" style="padding: 20px; color: white;"></div>
+
         </header>
 
         <!-- SEARCH BAR (ALWAYS BELOW HEADER) -->
@@ -249,9 +259,71 @@ function showItems() {
     `;
 }
 </script>
+    <script>
+function showMenu() {
+    const container = document.getElementById("info-container");
+    container.innerHTML = `
+        <h2>Menu</h2>
+        <ul>
+            <li><strong>Appetizers:</strong> Spring Rolls, Paneer Tikka, Chicken Wings</li>
+            <li><strong>Main Course:</strong> Chicken Biryani, Veg Biryani, Mutton Curry</li>
+            <li><strong>Beverages:</strong> Mango Lassi, Cold Coffee, Soft Drinks</li>
+            <li><strong>Desserts:</strong> Gulab Jamun, Rasmalai, Ice Cream Sundae</li>
+        </ul>
+    `;
+}
+
+function showSignIn() {
+    const container = document.getElementById("info-container");
+    container.innerHTML = `
+        <h2>Sign In</h2>
+        <p>Sign in with your email or phone number to save your favorite dishes and track orders.</p>
+        <form>
+            Email: <input type="email" placeholder="Enter your email"><br><br>
+            Password: <input type="password" placeholder="Enter password"><br><br>
+            <button type="submit">Sign In</button>
+        </form>
+        <p>Loyalty points available for returning customers!</p>
+    `;
+}
+
+function showLogIn() {
+    const container = document.getElementById("info-container");
+    container.innerHTML = `
+        <h2>Log In</h2>
+        <p>Log in as a customer to check your order history or as a restaurant owner to manage your menu.</p>
+        <form>
+            Username: <input type="text" placeholder="Enter username"><br><br>
+            Password: <input type="password" placeholder="Enter password"><br><br>
+            <button type="submit">Log In</button>
+        </form>
+        <p>Social login available via Google or Facebook.</p>
+    `;
+}
+
+function showContact() {
+    const container = document.getElementById("info-container");
+    container.innerHTML = `
+        <h2>Contact Us</h2>
+        <p>Address: 123 Biryani Street, Foodie City, FC 45678</p>
+        <p>Phone: +91 98765 43210</p>
+        <p>Email: support@favouriteapp.com</p>
+        <p>Customer Support Hours: Mon-Sun 10:00 AM – 10:00 PM</p>
+        <form>
+            Name: <input type="text" placeholder="Your Name"><br><br>
+            Email: <input type="email" placeholder="Your Email"><br><br>
+            Message:<br>
+            <textarea placeholder="Type your message" rows="4" cols="30"></textarea><br><br>
+            <button type="submit">Send Message</button>
+        </form>
+    `;
+}
+</script>
+
 
 </body>
 </html>
+
 
 
 
