@@ -74,77 +74,71 @@ body {
 }
 
 /* SEARCH BELOW HEADER - CENTERED */
+/* SEARCH BELOW HEADER – AUTO SCALE & BIGGER */
 .search-container {
-    padding: 10px 30px;
+    padding: 16px 20px;
     display: flex;
-    justify-content: center;   /* center horizontally */
+    justify-content: center;
 }
 
 .search-box {
     width: 100%;
-    max-width: 600px;
-    padding: 10px 15px;
-    border-radius: 25px;
+    max-width: clamp(320px, 85vw, 650px);
+    padding: 14px 18px;
+    border-radius: 30px;
     border: none;
     outline: none;
-    font-size: 15px;
+    font-size: clamp(15px, 4vw, 18px);
 }
-
 
 /* CARD SECTION */
 .cards {
-    padding: 30px;
-    display: flex;
-    justify-content: center;   /* center horizontally */
-}
-/* CARD SECTION */
-.cards {
-    min-height: 60vh;
+    min-height: 65vh;
     padding: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* CARD – AUTO SCALE */
+/* CARD – BIGGER START SIZE */
 .card {
-    width: clamp(320px, 80vw, 420px);
+    width: clamp(360px, 90vw, 460px);
     background: rgba(255,255,255,0.95);
-    border-radius: 18px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 }
 
-/* IMAGE – AUTO SCALE */
+/* IMAGE – BIGGER ON MOBILE */
 .card img {
     width: 100%;
-    height: clamp(180px, 40vw, 260px);
+    height: clamp(220px, 55vw, 300px);
     object-fit: cover;
 }
 
 /* CARD BODY */
 .card-body {
-    padding: clamp(14px, 4vw, 20px);
+    padding: clamp(18px, 5vw, 24px);
 }
 
 .card-body h3 {
-    font-size: clamp(16px, 4vw, 20px);
-    margin-bottom: 8px;
+    font-size: clamp(18px, 5vw, 22px);
+    margin-bottom: 10px;
 }
 
 /* RATING */
 .rating {
-    font-size: clamp(14px, 3.5vw, 16px);
+    font-size: clamp(15px, 4vw, 17px);
     color: #555;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 /* TAGS */
 .tags span {
     background: #ffe0b2;
-    padding: 6px 12px;
-    border-radius: 18px;
-    font-size: clamp(12px, 3vw, 14px);
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: clamp(13px, 3.5vw, 15px);
     margin-right: 8px;
 }
 
