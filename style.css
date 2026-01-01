@@ -86,6 +86,26 @@ body {
 #menu-toggle:checked ~ .nav {
     display: flex;
 }
+/* Menu Icon */
+.menu-icon {
+    font-size: 28px;        /* slightly bigger icon */
+    color: #ff6600;         /* bright orange for visibility */
+    cursor: pointer;        /* changes cursor on hover */
+    padding: 5px 10px;      /* clickable area around icon */
+    border-radius: 5px;     /* optional rounded corners */
+    transition: background 0.3s; /* smooth hover effect */
+}
+
+/* Hover effect */
+.menu-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* light transparent bg on hover */
+}
+
+/* Hide checkbox input */
+#menu-toggle {
+    display: none;
+}
+
 
 /* SEARCH BELOW HEADER - CENTERED */
 /* SEARCH BELOW HEADER – AUTO SCALE & BIGGER */
@@ -165,5 +185,6 @@ body {
     height: clamp(220px, 55vw, 300px);
     object-fit: cover;
 }
+
 
 
