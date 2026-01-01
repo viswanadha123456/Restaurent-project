@@ -96,20 +96,22 @@ body {
     min-height: 65vh;
     padding: 30px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;  /* stack cards vertically */
+    align-items: center;     /* center horizontally */
+    gap: 20px;               /* spacing between cards */
 }
 
-/* CARD – BIGGER START SIZE */
+/* CARD – AUTO SCALE */
 .card {
     width: clamp(360px, 90vw, 460px);
     background: rgba(255,255,255,0.95);
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    cursor: pointer;
 }
 
-/* IMAGE – BIGGER ON MOBILE */
+/* IMAGE – AUTO SCALE */
 .card img {
     width: 100%;
     height: clamp(220px, 55vw, 300px);
@@ -141,6 +143,8 @@ body {
     font-size: clamp(13px, 3.5vw, 15px);
     margin-right: 8px;
 }
+
+
 
 
 
