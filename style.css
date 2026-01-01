@@ -1,0 +1,131 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* BACKGROUND */
+body {
+    min-height: 100vh;
+    background-image: url("https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/chicken-biryani-5_n3pwns.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* FIXED PAGE (SAME EVERYWHERE) */
+.page {
+    width: 1200px;      /* fixed width */
+    max-width: 100%;    /* scale on small screens */
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+/* HEADER */
+.header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    gap: 20px;
+}
+
+/* LOGO */
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* SEARCH */
+.search-box {
+    flex: 1;
+    max-width: 600px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+/* MENU ICON */
+.menu-icon {
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+}
+
+/* HIDE CHECKBOX */
+#menu-toggle {
+    display: none;
+}
+
+/* MENU */
+.nav {
+    position: absolute;
+    top: 75px;
+    right: 30px;
+    width: 200px;
+    display: none;
+    flex-direction: column;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 15px;
+    background: rgba(0,0,0,0.4);
+}
+
+/* SHOW MENU */
+#menu-toggle:checked ~ .nav {
+    display: flex;
+}
+
+/* CARD SECTION */
+.cards {
+    padding: 30px;
+}
+
+.card {
+    max-width: 320px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* CARD IMAGE */
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* CARD BODY */
+.card-body {
+    padding: 15px;
+}
+
+.card-body h3 {
+    margin-bottom: 6px;
+}
+
+/* RATING */
+.rating {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+/* TAGS */
+.tags span {
+    background: #ffe0b2;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    margin-right: 6px;
+}
