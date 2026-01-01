@@ -41,7 +41,7 @@
                 </div>
             </div>
 
-            <div class="card" onclick="showItems()">
+            <div class="card" onclick="PaneerItems()">
                 <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/paneer-biryani.jpg">
                 <div class="card-body">
                     <h3>Delhi Paneer House</h3>
@@ -208,7 +208,43 @@
         `;
     }
     </script>
+    <script>
+function PaneerItems() {
+    const container = document.getElementById("cards-container");
+
+    // Replace content with paneer/veg items
+    container.innerHTML = `
+        <div class="card">
+            <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/paneer-biryani.jpg">
+            <div class="card-body">
+                <h3>Delhi Paneer House</h3>
+                <div class="rating">⭐⭐⭐⭐⭐ <span>9 reviews</span></div>
+                <div class="tags"><span>Biryani</span><span>Veg</span></div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/paneer-biryani.jpg">
+            <div class="card-body">
+                <h3>Paneer Palace</h3>
+                <div class="rating">⭐⭐⭐⭐⭐ <span>14 reviews</span></div>
+                <div class="tags"><span>Biryani</span><span>Veg</span></div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/veg-biryani.jpg">
+            <div class="card-body">
+                <h3>Green Veggie Biryani</h3>
+                <div class="rating">⭐⭐⭐⭐⭐ <span>10 reviews</span></div>
+                <div class="tags"><span>Biryani</span><span>Veg</span></div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/paneer-biryani.jpg">
+            <div class="card-body">
+                <h3
+
 </body>
 </html>
+
 
 
