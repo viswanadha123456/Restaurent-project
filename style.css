@@ -1,106 +1,152 @@
-/* RESET */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-/* BODY & PAGE */
+/* BACKGROUND */
 body {
-  background: #f3f3f3;
-  padding: 20px;
+    min-height: 100vh;
+    background-image: url("https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/chicken-biryani-5_n3pwns.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
+/* FIXED PAGE */
 .page {
-  max-width: 1200px;
-  margin: 0 auto;
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    min-height: 100vh;
 }
 
 /* HEADER */
 .header {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #333;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
 }
 
-/* SEARCH BOX */
+/* LOGO */
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* MENU ICON */
+.menu-icon {
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+}
+
+/* HIDE CHECKBOX */
+#menu-toggle {
+    display: none;
+}
+
+/* MENU */
+.nav {
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    width: 200px;
+    display: none;
+    flex-direction: column;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    background: rgba(0,0,0,0.4);
+}
+
+/* SHOW MENU */
+#menu-toggle:checked ~ .nav {
+    display: flex;
+}
+
+/* SEARCH BELOW HEADER - CENTERED */
+/* SEARCH BELOW HEADER – AUTO SCALE & BIGGER */
 .search-container {
-  margin-bottom: 30px;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: center;
 }
+
 .search-box {
-  width: 100%;
-  max-width: 600px;
-  padding: 12px 20px;
-  border-radius: 25px;
-  border: 1px solid #ccc;
-  font-size: 16px;
+    width: 100%;
+    max-width: clamp(320px, 85vw, 650px);
+    padding: 14px 18px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: clamp(15px, 4vw, 18px);
 }
 
-/* RESTAURANT CARD */
-.restaurants {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
+/* CARD SECTION */
+/* CARD BODY */
+.card-body {
+    padding: clamp(18px, 5vw, 24px);
 }
 
-.restaurant {
-  background: #fff;
-  border-radius: 20px;
-  padding: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+/* CARD TITLE */
+.card-body h3 {
+    font-size: clamp(18px, 5vw, 22px);
+    margin-bottom: 10px;
 }
 
-.restaurant-title {
-  font-size: 22px;
-  font-weight: 700;
-  padding-bottom: 8px;
-  border-bottom: 2px solid #eee;
+/* RATING */
+.rating {
+    font-size: clamp(15px, 4vw, 17px);
+    color: #555;
+    margin-bottom: 12px;
 }
 
-/* ITEMS LIST */
-.items {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+/* TAGS – HORIZONTAL INSIDE CARD */
+.tags {
+    display: flex;          /* horizontal layout */
+    gap: 8px;               /* space between tags */
+    flex-wrap: wrap;        /* wrap if too many */
 }
 
-/* SINGLE ITEM */
-.item {
-  display: flex;
-  background: #fafafa;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-.item:hover {
-  transform: translateY(-3px);
+.tags span {
+    background: #ffe0b2;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: clamp(13px, 3.5vw, 15px);
 }
 
-.item img {
-  width: 120px;
-  height: 100px;
-  object-fit: cover;
+.cards {
+    min-height: 65vh;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;  /* stack cards vertically */
+    align-items: center;     /* center horizontally */
+    gap: 20px;               /* vertical spacing between cards */
+    width: 100%;
+    max-width: 460px;        /* max card width to keep consistent */
+    margin: 0 auto;          /* center the entire container */
 }
 
-.item-info {
-  padding: 10px 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.card {
+    width: 100%;             /* full width of container */
+    max-width: 460px;        /* limit max width */
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    cursor: pointer;
 }
 
-.item-info h4 {
-  font-size: 18px;
-  margin-bottom: 5px;
-}
-
-.item-info p {
-  font-size: 14px;
-  color: #555;
+.card img {
+    width: 100%;
+    height: clamp(220px, 55vw, 300px);
+    object-fit: cover;
 }
