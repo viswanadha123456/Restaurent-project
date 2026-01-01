@@ -8,47 +8,53 @@
 </head>
 <body>
 
-<header class="header">
-    <!-- Left -->
-    <div class="logo">My Favourite Restaurant</div>
+<div class="page">
 
-    <!-- Middle search (always visible, no icon) -->
-    <input 
-        type="search" 
-        class="search-box" 
-        placeholder="Your Favourite items are available "
-    >
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">Favourite App</div>
 
-    <!-- Right menu toggle -->
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">☰</label>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">☰</label>
 
-    <!-- Menu -->
-    <nav class="nav">
-        <a href="#">Menu</a>
-        <a href="#">Sign in</a>
-        <a href="#">log in</a>
-        <a href="#">Contact us</a>
-    </nav>
-</header>
-<!-- ONE CONTAINER CARD -->
-<section class="cards">
-    <div class="card">
-        <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/chicken-biryani-5_n3pwns.jpg">
+        <nav class="nav">
+            <a href="#">Menu</a>
+            <a href="#">Sign in</a>
+            <a href="#">Log in</a>
+            <a href="#">Contact us</a>
+        </nav>
+    </header>
 
-        <div class="card-body">
-            <h3>Masha Biryani Point</h3>
+    <!-- SEARCH BAR (ALWAYS BELOW HEADER) -->
+    <div class="search-container">
+        <input 
+            type="search" 
+            class="search-box" 
+            placeholder="Your Favourite items are available"
+        >
+    </div>
 
-            <div class="rating">
-                ⭐⭐⭐⭐☆ <span>11 reviews</span>
-            </div>
+    <!-- CARD SECTION -->
+    <section class="cards">
+        <div class="card">
+            <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/chicken-biryani-5_n3pwns.jpg">
 
-            <div class="tags">
-                <span>Biryani</span>
-                <span>Non-Veg</span>
+            <div class="card-body">
+                <h3>Masha Biryani Point</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐☆ <span>11 reviews</span>
+                </div>
+
+                <div class="tags">
+                    <span>Biryani</span>
+                    <span>Non-Veg</span>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+</div>
+
 </body>
 </html>
