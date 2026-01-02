@@ -7,7 +7,7 @@
 
 /* BACKGROUND */
 body {
-    min-height: 1000vh;
+    min-height: 500vh;
     background-image: url("https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/chicken-biryani-5_n3pwns.jpg");
     background-size: cover;
     background-position: center;
@@ -166,6 +166,7 @@ body {
     height: clamp(220px, 55vw, 300px);
     object-fit: cover;
 }
+
 
 
 
