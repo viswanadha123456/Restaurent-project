@@ -7,7 +7,7 @@
 
 /* BACKGROUND */
 body {
-    min-height: 500vh;
+    min-height: 100vh;
     background-image: url("https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/chicken-biryani-5_n3pwns.jpg");
     background-size: cover;
     background-position: center;
@@ -140,7 +140,7 @@ body {
 }
 
 .cards {
-    min-height: 65vh;
+    min-height: auto;
     padding: 30px;
     display: flex;
     flex-direction: column; /* stack cards vertically */
@@ -213,6 +213,7 @@ body {
     font-size: 14px;
     color: #ccc;
 }
+
 
 
 
