@@ -256,7 +256,7 @@ function showItems() {
             <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767271343/paneer-biryani-recipe_zzip9r.jpg">
             <div class="card-body">
                 <h3>Shahi Paneer Delight</h3>
-                <div class="tags"> <span>order</span></div>
+                  <button onclick="placeOrder('Mutton Biryani', 450)">Order</button>
                 <div class="tags"><span>Biryani</span><span>Veg</span>    <span>₹350</span></div>
             </div>
         </div>
@@ -372,10 +372,24 @@ function searchItems() {
     });
 }
 </script>
+function placeOrder(itemName, price) {
+    db.collection("orders").add({
+        item: itemName,
+        price: price,
+        orderTime: firebase.firestore.Timestamp.now()
+    })
+    .then(() => {
+        alert(itemName + " ordered successfully ✅");
+    })
+    .catch((err) => {
+        alert("Error: " + err.message);
+    });
+}
 
 
 </body>
 </html>
+
 
 
 
