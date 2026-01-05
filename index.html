@@ -382,38 +382,11 @@ function placeOrder(itemName, price) {
 }
 </script>
 
-   <script type="module">
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyBAlwvytBQ0RDMkBzDYotvrdn48tCA1LVg",
-  authDomain: "restaurent-project-fab52.firebaseapp.com",
-  projectId: "restaurent-project-fab52",
-  storageBucket: "restaurent-project-fab52.appspot.com",
-  messagingSenderId: "659834666344",
-  appId: "1:659834666344:web:79e91cfde2605fdf03eadd"
-};
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-
-window.placeOrder = async function(item, price) {
-  try {
-    await addDoc(collection(db, "orders"), {
-      item: item,
-      price: price,
-      time: serverTimestamp()
-    });
-    alert("Order placed successfully ✅");
-  } catch (e) {
-    alert(e.message);
-  }
-};
-</script>
 
 </body>
 </html>
+
 
 
 
