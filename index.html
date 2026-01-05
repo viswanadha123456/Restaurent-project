@@ -372,6 +372,7 @@ function searchItems() {
     });
 }
 </script>
+<script>
 function placeOrder(itemName, price) {
     db.collection("orders").add({
         item: itemName,
@@ -385,10 +386,11 @@ function placeOrder(itemName, price) {
         alert("Error: " + err.message);
     });
 }
-
+</script>
 
 </body>
 </html>
+
 
 
 
