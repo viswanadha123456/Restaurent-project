@@ -213,22 +213,24 @@ body {
     font-size: 14px;
     color: #ccc;
 }
-
 button {
-    background-color: #ffb703; /* Golden color */
-    color: #fff;               /* White text */
-    border: none;              /* Remove default border */
-    border-radius: 20px;       /* Rounded corners */
-    padding: 10px 20px;        /* Top-bottom 10px, left-right 20px */
-    font-size: 16px;           /* Text size */
+    background-color: #fcd5b2; /* Soft peach color, same as tags */
+    color: #000;               /* Black text for contrast */
+    border: none;              /* No border */
+    border-radius: 20px;       /* Fully rounded corners */
+    padding: 8px 16px;         /* Vertical 8px, horizontal 16px */
+    font-size: 14px;           /* Small but readable text */
+    font-weight: 500;          /* Medium weight */
     cursor: pointer;           /* Pointer on hover */
-    transition: all 0.3s ease; /* Smooth hover effect */
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* subtle shadow */
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #e69500; /* Darker shade on hover */
-    transform: scale(1.05);    /* Slightly bigger on hover */
+    background-color: #f9b233; /* Slightly darker peach on hover */
 }
+
+
 
 
 
