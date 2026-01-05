@@ -234,14 +234,12 @@ button {
     cursor: pointer;
     box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
     transition: background-color 0.3s ease;
-   display: flex;
-    justify-content: space-between; /* space between title and button */
-    align-items: right;
 }
 
 button:hover {
     background-color: #f9b233;
 }
+
 
 
 
