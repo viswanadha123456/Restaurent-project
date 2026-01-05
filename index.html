@@ -178,55 +178,78 @@
 
         </section>
     </div>
-<script>
+ <script>
+    function showItems() {
+        const container = document.getElementById("cards-container");
+
+        // Replace content with new items using template literals
+        container.innerHTML = `
+            <div class="card">
+                <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/mutton-biryani.jpg">
+                <div class="card-body">
+                    <h3>Mutton Biryani Special</h3>
+                    <div class="rating">⭐⭐⭐⭐☆ <span>8 reviews</span></div>
+                    <div class="tags"><span>Biryani</span><span>Non-Veg</span></div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/veg-biryani.jpg">
+                <div class="card-body">
+                    <h3>Veg Biryani Delight</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ <span>15 reviews</span></div>
+                    <div class="tags"><span>Biryani</span><span>Veg</span></div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767259210/chicken-biryani-5_n3pwns.jpg">
+                <div class="card-body">
+                    <h3>Chicken Biryani Classic</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ <span>20 reviews</span></div>
+                    <div class="tags"><span>Biryani</span><span>Non-Veg</span></div>
+                </div>
+            </div>
+        `;
+    }
+    </script>
+    <script>
 function showItems() {
     const container = document.getElementById("cards-container");
 
+    // Replace content with paneer/veg items
     container.innerHTML = `
-        <div class="order-container">
-            <h2>Order Items</h2>
-
-            <div class="order-row">
-                <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767270465/maxresdefault_ag2xwv.jpg">
-                <div class="order-info">
-                    <p>Mutton Biryani</p>
-                    <span>₹450</span>
-                </div>
-                <button onclick="placeOrder('Mutton Biryani')">Order</button>
+        <div class="card">
+            <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767270465/maxresdefault_ag2xwv.jpg">
+            <div class="card-body">
+                <h3>Mutton Biryani</h3>
+                <div class="rating">⭐⭐⭐⭐⭐ <span>9 reviews</span></div>
+                <div class="tags"><span>Biryani</span><span>Veg</span>     <span>₹450</span></</div>
             </div>
-
-            <div class="order-row">
-                <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767270816/thumb__700_0_0_0_auto_ho1o45.jpg">
-                <div class="order-info">
-                    <p>Chicken Tikka Biryani</p>
-                    <span>₹300</span>
-                </div>
-                <button onclick="placeOrder('Chicken Tikka Biryani')">Order</button>
+        </div>
+        <div class="card">
+            <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767270816/thumb__700_0_0_0_auto_ho1o45.jpg">
+            <div class="card-body">
+                <h3>Chicken Tikka Bryani </h3>
+                <div class="rating">⭐⭐⭐⭐⭐ <span>14 reviews</span></div>
+                <div class="tags"><span>Biryani</span><span>Veg</span>     <span>₹300</span></</div>
             </div>
-
-            <div class="order-row">
-                <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767270816/thumb__700_0_0_0_auto_ho1o45.jpg">
-                <div class="order-info">
-                    <p>Green Veggie Biryani</p>
-                    <span>₹400</span>
-                </div>
-                <button onclick="placeOrder('Green Veggie Biryani')">Order</button>
+        </div>
+        <div class="card">
+            <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767270816/thumb__700_0_0_0_auto_ho1o45.jpg">
+            <div class="card-body">
+                <h3>Green Veggie Biryani</h3>
+                <div class="rating">⭐⭐⭐⭐⭐ <span>10 reviews</span></div>
+                <div class="tags"><span>Biryani</span><span>Veg</span>      <span>₹400</span></</div>
             </div>
-
-            <div class="order-row">
-                <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767271343/paneer-biryani-recipe_zzip9r.jpg">
-                <div class="order-info">
-                    <p>Shahi Paneer Delight</p>
-                    <span>₹350</span>
-                </div>
-                <button onclick="placeOrder('Shahi Paneer Delight')">Order</button>
+        </div>
+        <div class="card">
+            <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767271343/paneer-biryani-recipe_zzip9r.jpg">
+            <div class="card-body">
+                <h3>Shahi Paneer Delight</h3>
+                <div class="rating">⭐⭐⭐⭐⭐ <span>13 reviews</span></div>
+                <div class="tags"><span>Biryani</span><span>Veg</span>    <span>₹350</span></div>
             </div>
         </div>
     `;
-}
-
-function placeOrder(itemName) {
-    alert(itemName + " ordered successfully ✅");
 }
 </script>
 
@@ -324,6 +347,7 @@ function showContact() {
 
 </body>
 </html>
+
 
 
 
