@@ -213,22 +213,34 @@ body {
     font-size: 14px;
     color: #ccc;
 }
+.card-body {
+    display: flex;
+    justify-content: space-between; /* space between title and button */
+    align-items: center;
+}
+
+.card-body h3 {
+    margin: 0; /* Remove default margin */
+}
+
 button {
-    background-color: #fcd5b2; /* Soft peach color, same as tags */
-    color: #000;               /* Black text for contrast */
-    border: none;              /* No border */
-    border-radius: 20px;       /* Fully rounded corners */
-    padding: 8px 16px;         /* Vertical 8px, horizontal 16px */
-    font-size: 14px;           /* Small but readable text */
-    font-weight: 500;          /* Medium weight */
-    cursor: pointer;           /* Pointer on hover */
-    box-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* subtle shadow */
+    background-color: #fcd5b2;
+    color: #000;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #f9b233; /* Slightly darker peach on hover */
+    background-color: #f9b233;
 }
+
+
 
 
 
