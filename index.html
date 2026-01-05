@@ -387,9 +387,31 @@ function placeOrder(itemName, price) {
     });
 }
 </script>
+    <script>
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBAlwvytBQ0RDMkBzDYotvrdn48tCA1LVg",
+  authDomain: "restaurent-project-fab52.firebaseapp.com",
+  projectId: "restaurent-project-fab52",
+  storageBucket: "restaurent-project-fab52.firebasestorage.app",
+  messagingSenderId: "659834666344",
+  appId: "1:659834666344:web:79e91cfde2605fdf03eadd",
+  measurementId: "G-3DM8HC6WKB"
+};
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+    </script>
 </body>
 </html>
+
 
 
 
