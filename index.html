@@ -27,7 +27,9 @@
 
         <!-- SEARCH BAR (ALWAYS BELOW HEADER) -->
         <div class="search-container">
-            <input type="search" class="search-box" placeholder="Your Favourite items are available">
+            <input type="search" class="search-box" placeholder="Your Favourite items are available" 
+                onkeyup="searchItems()"
+    >
         </div>
 
         <!-- CARD SECTION -->
@@ -218,6 +220,7 @@ function showItems() {
     // Replace content with paneer/veg items
     container.innerHTML = `
         <div class="card">
+        <div class="order-row" data-name="mutton biryani">
             <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767270465/maxresdefault_ag2xwv.jpg">
             <div class="card-body">
                 <h3>Mutton Biryani</h3>
@@ -226,6 +229,7 @@ function showItems() {
             </div>
         </div>
         <div class="card">
+        <div class="order-row" data-name="mutton biryani">
             <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767270816/thumb__700_0_0_0_auto_ho1o45.jpg">
             <div class="card-body">
                 <h3>Chicken Tikka Bryani </h3>
@@ -234,6 +238,7 @@ function showItems() {
             </div>
         </div>
         <div class="card">
+        <div class="order-row" data-name="mutton biryani">
             <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767270816/thumb__700_0_0_0_auto_ho1o45.jpg">
             <div class="card-body">
                 <h3>Green Veggie Biryani</h3>
@@ -242,6 +247,7 @@ function showItems() {
             </div>
         </div>
         <div class="card">
+        <div class="order-row" data-name="mutton biryani">
             <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767271343/paneer-biryani-recipe_zzip9r.jpg">
             <div class="card-body">
                 <h3>Shahi Paneer Delight</h3>
@@ -343,10 +349,29 @@ function showContact() {
         </p>
     </div>
 </footer>
+<script>
+function searchItems() {
+    const input = document.querySelector(".search-box").value.toLowerCase();
+
+    // works for both cards and order rows
+    const items = document.querySelectorAll(".card, .order-row");
+
+    items.forEach(item => {
+        const name = item.getAttribute("data-name");
+
+        if (name && name.includes(input)) {
+            item.style.display = "flex"; // or "block" for cards
+        } else {
+            item.style.display = "none";
+        }
+    });
+}
+</script>
 
 
 </body>
 </html>
+
 
 
 
