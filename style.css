@@ -97,7 +97,7 @@ body {
 }
 
 .search-box {
-    width: 100%;
+    width: 80%;
     max-width: clamp(320px, 85vw, 650px);
     padding: 14px 18px;
     border-radius: 30px;
@@ -213,6 +213,7 @@ body {
     font-size: 14px;
     color: #ccc;
 }
+
 
 
 
