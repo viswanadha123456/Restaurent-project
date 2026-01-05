@@ -213,15 +213,6 @@ body {
     font-size: 14px;
     color: #ccc;
 }
-.card-body {
-    display: flex;
-    justify-content: space-between; /* space between title and button */
-    align-items: center;
-}
-
-.card-body h3 {
-    margin: 0; /* Remove default margin */
-}
 
 button {
     background-color: #fcd5b2;
@@ -239,6 +230,7 @@ button {
 button:hover {
     background-color: #f9b233;
 }
+
 
 
 
