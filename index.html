@@ -247,7 +247,7 @@ function showItems() {
             <div class="card-body">
                 <h3>Green Veggie Biryani</h3>
                <button>Order</button>
-                <div class="tags"><span>Biryani</span><span>Veg</span> <span>₹400</span></</div>
+                <div class="tags"><span>Biryani</span><span> Veg </span>  <span> ₹400 </span> </div>
             </div>
         </div>
         <div class="card">
@@ -256,7 +256,7 @@ function showItems() {
             <img src="https://res.cloudinary.com/dhym83o6r/image/upload/v1767271343/paneer-biryani-recipe_zzip9r.jpg">
             <div class="card-body">
                 <h3>Shahi Paneer Delight</h3>
-                  <button>Order</button>
+                 <button onclick="placeOrder('Mutton Biryani', 450)">Order</button>
                 <div class="tags"><span>Biryani</span><span>Veg</span>    <span>₹350</span></div>
             </div>
         </div>
@@ -379,38 +379,42 @@ function placeOrder(itemName, price) {
         price: price,
         orderTime: firebase.firestore.Timestamp.now()
     })
-    .then(() => {
-        alert(itemName + " ordered successfully ✅");
-    })
-    .catch((err) => {
-        alert("Error: " + err.message);
-    });
 }
 </script>
-    <script>
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+   <script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
 const firebaseConfig = {
   apiKey: "AIzaSyBAlwvytBQ0RDMkBzDYotvrdn48tCA1LVg",
   authDomain: "restaurent-project-fab52.firebaseapp.com",
   projectId: "restaurent-project-fab52",
-  storageBucket: "restaurent-project-fab52.firebasestorage.app",
+  storageBucket: "restaurent-project-fab52.appspot.com",
   messagingSenderId: "659834666344",
-  appId: "1:659834666344:web:79e91cfde2605fdf03eadd",
-  measurementId: "G-3DM8HC6WKB"
+  appId: "1:659834666344:web:79e91cfde2605fdf03eadd"
 };
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-    </script>
+const db = getFirestore(app);
+
+window.placeOrder = async function(item, price) {
+  try {
+    await addDoc(collection(db, "orders"), {
+      item: item,
+      price: price,
+      time: serverTimestamp()
+    });
+    alert("Order placed successfully ✅");
+  } catch (e) {
+    alert(e.message);
+  }
+};
+</script>
+
 </body>
 </html>
+
 
 
 
